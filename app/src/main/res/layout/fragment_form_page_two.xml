@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/download"
+    tools:context=".FormPageTwoFragment">
+
+    <!-- 🩶 Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/actionLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <!-- 🎵 Favorite Song -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    app:endIconMode="clear_text"
+                    android:textColorHint="#261C0A">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/favSongInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Favorite Song"
+                        android:textColorHint="@color/black"
+                        android:background="@android:color/transparent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addSongButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#EB7DF8"
+                    android:background="@drawable/common_button" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Favorite Songs"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#580A62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favSongList"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical" />
+
+            <!-- 🎬 Favorite Movie -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/favMovieInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Favorite Movie"
+                        android:textColorHint="@color/black"
+                        android:background="@android:color/transparent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addMovieButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#EB7DF8"
+                    android:background="@drawable/common_button" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Favorite Movies"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#580A62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favMovieList"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical" />
+
+            <!-- 🧩 Hobbies -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/hobbyInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Favorite Hobby"
+                        android:textColorHint="@color/black"
+                        android:background="@android:color/transparent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addHobbyButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#EB7DF8"
+                    android:background="@drawable/common_button" />
+            </LinearLayout>
+
+            <TextView
+                android:text="Favorite Hobbies"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#580A62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/hobbiesList"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical" />
+
+            <!-- 🛠 Skills -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="12"
+                android:gravity="center_vertical">
+
+                <!-- Skill Name -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    app:endIconMode="clear_text">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/skillInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Skill"
+                        android:textColorHint="@color/black"
+                        android:background="@android:color/transparent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Rating Spinner -->
+                <Spinner
+                    android:id="@+id/skillRateInput"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:entries="@array/skillRate"
+                    android:spinnerMode="dropdown"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:backgroundTint="#AD06C1"
+                    android:padding="5dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp" />
+
+                <!-- Add Button -->
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/addSkillButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Add"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#EB7DF8"
+                    android:background="@drawable/common_button" />
+            </LinearLayout>
+
+            <!-- Skills List -->
+            <TextView
+                android:text="Skills"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:textColor="#580A62"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/skillsList"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:nestedScrollingEnabled="true"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ⬅️➡️ Bottom Buttons -->
+    <LinearLayout
+        android:id="@+id/actionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/backButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:backgroundTint="#EB7DF8"
+            android:background="@drawable/common_button" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextButton"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:backgroundTint="#EB7DF8"
+            android:background="@drawable/common_button" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

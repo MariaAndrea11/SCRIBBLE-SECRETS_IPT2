@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/download"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/starImage"
+        android:layout_width="259dp"
+        android:layout_height="219dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/heart"
+        android:backgroundTint="#840D95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.SmallComponent" />
+
+    <TextView
+        android:id="@+id/kodeGO"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="185dp"
+        android:text="Scribble and
+                          Secrets"
+        android:textAlignment="center"
+        android:textColor="#BA2FD0"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/caveat_variablefont_wght"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/slamBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/dancingscript"
+        android:text="@string/slam_book"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/kodeGO" />
+
+    <com.google.android.material.divider.MaterialDivider
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="44dp"
+        app:dividerColor="@color/purple_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slamBook" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCreate"
+        android:layout_width="168dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/common_button"
+        android:backgroundTint="#EB7DF8"
+        android:fontFamily="@font/dancingscript"
+        android:text="Create"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnView"
+        android:layout_width="168dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/common_button"
+        android:backgroundTint="#EB7DF8"
+        android:text="LIST"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:fontFamily="@font/dancingscript"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreate" />
+
+    <!-- 🔽 New Panel Section Below the LIST Button -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/listPanel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:visibility="gone"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="#EB7DF8">
+
+            <TextView
+                android:id="@+id/panelTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Slam Book Entries"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#EB7DF8"
+                android:paddingBottom="8dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black" />
+
+            <ListView
+                android:id="@+id/listViewEntries"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:divider="#EB7DF8"
+                android:dividerHeight="1dp"
+                android:paddingTop="8dp" />
+
+
+            <Button
+                android:id="@+id/viewListButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="View All Entries"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <!-- 🔼 End of New Panel Section -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

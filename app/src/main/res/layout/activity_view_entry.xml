@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200">
+
+
+        <ImageView
+            android:id="@+id/imageProfile"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/prof_icon"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:backgroundTint="#EB7DF8"
+            android:layout_marginBottom="16dp"
+            android:text="Name"
+            style="@style/TextLabel"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Define Love:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtLove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Define Friendship:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtFriendship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Memorable Experience:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtExperience"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Describe Me:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtDescribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advice For Me:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtAdvice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating:"
+            style="@style/TextLabel" />
+
+        <TextView
+            android:id="@+id/txtRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextValue" />
+
+    </LinearLayout>
+</ScrollView>

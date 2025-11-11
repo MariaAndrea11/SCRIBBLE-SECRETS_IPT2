@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Make the inside of the button transparent -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Add a colored stroke (outline). I'm using your @color/secondary -->
+    <!-- You can change the color or width to whatever you like. -->
+    <stroke
+        android:width="2dp"
+        android:color="#840D95" />
+
+    <!-- Add rounded corners to make it look smooth -->
+    <corners android:radius="8dp" />
+</shape>

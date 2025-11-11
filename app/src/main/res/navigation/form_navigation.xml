@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/form_navigation"
+    app:startDestination="@id/formPageOneFragment">
+
+    <!-- Menu -->
+    <action
+        android:id="@+id/action_formPageOneFragment_to_menuFragment"
+        app:destination="@id/action_formPageOneFragment_to_menuFragment" />
+
+
+
+    <!-- 📝 Page One -->
+    <fragment
+        android:id="@+id/formPageOneFragment"
+        android:name="com.kodego.diangca.ebrahim.myslambook.FormPageOneFragment"
+        android:label="Form Page One"
+        tools:layout="@layout/fragment_form_page_one">
+
+        <action
+            android:id="@+id/action_formPageOneFragment_to_formPageTwoFragment"
+            app:destination="@id/formPageTwoFragment" />
+    </fragment>
+
+    <!-- 🎵 Page Two -->
+    <fragment
+        android:id="@+id/formPageTwoFragment"
+        android:name="com.kodego.diangca.ebrahim.myslambook.FormPageTwoFragment"
+        android:label="Form Page Two"
+        tools:layout="@layout/fragment_form_page_two">
+
+        <action
+            android:id="@+id/action_formPageTwoFragment_to_formPageOneFragment"
+            app:destination="@id/formPageOneFragment"/>
+
+        <action
+            android:id="@+id/action_formPageTwoFragment_to_formPageThreeFragment"
+            app:destination="@id/formPageThreeFragment" />
+
+
+    </fragment>
+
+
+    <!-- 🌙 Page Three -->
+    <fragment
+        android:id="@+id/formPageThreeFragment"
+        android:name="com.kodego.diangca.ebrahim.myslambook.FormPageThreeFragment"
+        android:label="Form Page Three"
+        tools:layout="@layout/fragment_form_page_three">
+
+        <action
+            android:id="@+id/action_formPageThreeFragment_to_formPageTwoFragment"
+            app:destination="@id/formPageTwoFragment" />
+    </fragment>
+
+</navigation>
